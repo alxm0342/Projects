@@ -1,0 +1,72 @@
+------------------------
+Input File:
+------------------------
+void func(int x) {
+	while (x>1, x!=3) {
+		int c = 5
+	}
+	print_ln("c");
+}
+
+
+/*random comment*/
+void main(int s, int t, int u) {
+	if(23 < 24) {
+		NAME();
+	}
+	else if(24>23 {
+		//donothing
+	}
+/*commentcommentcommentcomment*/
+//comment
+//comment
+}
+void main2(void) {
+	String thisisafunction = "";
+}
+
+------------------------
+Integer Lexical Analysis:
+------------------------
+5 28 22 3 28 23 26 
+6 22 28 13 29 19 28 16 29 23 26 
+3 28 17 29 
+27 
+28 22 30 23 18 
+27 
+5 28 22 3 28 19 3 28 19 3 28 23 26 
+2 22 29 12 29 23 26 
+28 22 23 18 
+27 
+1 2 22 29 13 29 26 
+28 
+27 
+28 
+28 
+27 
+5 28 22 5 23 26 
+28 28 17 30 18 
+27 
+
+------------------------
+String Lexical Analysis:
+------------------------
+VOID id leftparen INT id rightparen leftbrace 
+WHILE leftparen id greater num comma id notequal num rightparen leftbrace 
+INT id assignop num 
+rightbrace 
+id leftparen stringliteral rightparen semicolon 
+rightbrace 
+VOID id leftparen INT id comma INT id comma INT id rightparen leftbrace 
+IF leftparen num lessequal num rightparen leftbrace 
+id leftparen rightparen semicolon 
+rightbrace 
+ELSE IF leftparen num greater num leftbrace 
+id 
+rightbrace 
+id 
+id 
+rightbrace 
+VOID id leftparen VOID rightparen leftbrace 
+id id assignop stringliteral semicolon 
+rightbrace 

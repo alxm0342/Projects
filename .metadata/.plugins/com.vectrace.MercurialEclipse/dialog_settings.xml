@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CommitDialog">
+		<item value="544" key="DIALOG_WIDTH"/>
+		<item value="22" key="DIALOG_Y_ORIGIN"/>
+		<item value="767" key="DIALOG_HEIGHT"/>
+		<item value="696" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="com.vectrace.MercurialEclipse.wizards.PushRepoWizard">
+		<list key="ConfigurationWizardMainPage.STORE_USERNAME_ID">
+			<item value="aamendez"/>
+		</list>
+	</section>
+	<section name="com.vectrace.MercurialEclipse.wizards.BundleRepoWizard">
+	</section>
+	<section name="com.vectrace.MercurialEclipse.wizards.ImportProjectsFromRepoWizard">
+	</section>
+	<section name="RevertDialog">
+		<item value="838" key="DIALOG_WIDTH"/>
+		<item value="145" key="DIALOG_Y_ORIGIN"/>
+		<item value="549" key="DIALOG_X_ORIGIN"/>
+		<item value="582" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="com.vectrace.MercurialEclipse.wizards.CloneRepoWizard">
+		<list key="ConfigurationWizardMainPage.STORE_USERNAME_ID">
+			<item value="aamendez"/>
+		</list>
+	</section>
+	<section name="com.vectrace.MercurialEclipse.wizards.PullRepoWizard">
+		<list key="ConfigurationWizardMainPage.STORE_USERNAME_ID">
+			<item value="aamendez"/>
+		</list>
+		<section name="C:\Users\Master\Documents\Projects\Hnefatafl">
+			<item value="true" key="update"/>
+			<item value="false" key="merge"/>
+			<item value="false" key="force"/>
+			<item value="false" key="cleanupdate"/>
+			<item value="false" key="rebase"/>
+		</section>
+		<section name="C:\Users\Master\Documents\Projects\Hnefatafl-QA">
+			<item value="true" key="update"/>
+			<item value="false" key="merge"/>
+			<item value="false" key="force"/>
+			<item value="false" key="cleanupdate"/>
+			<item value="false" key="rebase"/>
+		</section>
+		<section name="C:\Users\Master\Documents\Projects\DevTools">
+			<item value="true" key="update"/>
+			<item value="false" key="merge"/>
+			<item value="false" key="force"/>
+			<item value="false" key="cleanupdate"/>
+			<item value="false" key="rebase"/>
+		</section>
+	</section>
+</section>

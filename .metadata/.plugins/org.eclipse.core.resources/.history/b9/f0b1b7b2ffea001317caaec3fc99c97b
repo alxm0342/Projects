@@ -1,0 +1,81 @@
+/**
+ * Name: Alexis Mendez
+ * Date: 5/3/2014
+ * Description: Generates a match of words from a dictionary based on an input string
+ */
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Dictionary
+{	
+	public static void main(String[] args)
+	{
+		String lineIn = null;
+		String tileInputLine = null;
+		char[] tiles;
+		ArrayList<String> dictionary = new ArrayList<String>();
+		ArrayList<String> matches = new ArrayList<String>();
+		Scanner keyboard = new Scanner(System.in);
+		LinkedList<Character> unusedTiles = new LinkedList<Character>();
+		LinkedList<Character> usedTiles = new LinkedList<Character>();
+		
+		// load the tile input
+		tileInputLine = keyboard.nextLine();
+		
+		// load the dictionary
+		lineIn = keyboard.nextLine();
+		while (!lineIn.equals(""))
+		{	
+			dictionary.add(lineIn);
+			lineIn = keyboard.nextLine();
+		}
+		
+		// sort dictionary for faster search
+		Collections.sort(dictionary);
+		
+		tiles = tileInputLine.toCharArray();
+		
+		// add the tiles to a "heap" to check against each dictionary entry
+		for (char tileToCopy : tiles)
+		{
+			unusedTiles.add(tileToCopy);
+		}
+		
+		// check each entry in the dictionary
+		for (String testEntry : dictionary)
+		{
+			boolean isEntryValid = true;
+			
+			// test if each letter of the entry has a matching tile (or asterisk)
+			for (char testEntryTestLetter : testEntry.toCharArray())
+			{
+				if (unusedTiles.contains(testEntryTestLetter))
+				{
+					unusedTiles.remove(testEntryTestLetter);
+					usedTiles.add(testEntryTestLetter);
+				}
+				else
+				{
+					if (unusedTiles.contains('*'))
+					{
+						unusedTiles.remove('*');
+						usedTiles.add('*');
+					}
+					else
+					{
+						isEntryValid = false;
+					}
+				}
+			}
+			if (isEntryValid)
+			{
+				matches.add(testEntry);
+			}
+			unusedTiles.addAll(usedTiles);
+			usedTiles.clear();
+		}
+	}
+
+}

@@ -1,0 +1,58 @@
+------------------------
+Input File:
+------------------------
+void ten(int x) {
+	// recursive factorial function
+	if (x>1) {
+		print_line(x = 10);
+	}
+	else return 1;
+}
+
+string NAME(void) {
+	print_ln("my name is alex");
+}
+
+/*random comment*/
+void main(int s, int t, int u) {
+	if(23 < 24) {
+		NAME();
+	}
+/*commentcommentcommentcomment*/
+}
+
+------------------------
+Integer Lexical Analysis:
+------------------------
+5 28 22 3 28 23 26 
+2 22 28 13 29 23 26 
+28 22 28 17 29 23 18 
+27 
+1 4 29 18 
+27 
+28 28 22 5 23 26 
+28 22 30 23 18 
+27 
+5 28 22 3 28 19 3 28 19 3 28 23 26 
+2 22 29 12 29 23 26 
+28 22 23 18 
+27 
+27 
+
+------------------------
+String Lexical Analysis:
+------------------------
+VOID id leftparen INT id rightparen leftbrace 
+IF leftparen id greater num rightparen leftbrace 
+id leftparen id assignop num rightparen semicolon 
+rightbrace 
+ELSE RETURN num semicolon 
+rightbrace 
+id id leftparen VOID rightparen leftbrace 
+id leftparen stringliteral rightparen semicolon 
+rightbrace 
+VOID id leftparen INT id comma INT id comma INT id rightparen leftbrace 
+IF leftparen num lessequal num rightparen leftbrace 
+id leftparen rightparen semicolon 
+rightbrace 
+rightbrace 

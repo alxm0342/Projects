@@ -1,0 +1,36 @@
+1. When did your team find the most defects in the specification? During the
+specification review, during the design phase, or while programming?
+
+- Most specification defects were found during the design phase. We ventured too deep into our assumptions
+and lost sight of the basic implementation of the game rules itself. As a result of trying to
+get our assumptions to work correctly, we actually introduced more complicated scenarios and problems. 
+
+
+2. Given that finding defects later increases cost, could you have done anything to find
+these defects earlier?
+
+- We should have sat down and done a more thorough specification review to organize our thoughts
+as a team early on. It also would have helped if we had assigned the parts of the project equally.
+This parallel progress would keep everyone at a similar pace and mitigate overlap and merge conflicts. 
+Better code documentation would have provided more transparency to encourage for early detection of problems.
+
+
+3. Look through your defect list, both ones fixed and not. What was the most common
+cause? How might you address this type of problem in the future?
+
+- The most common cause was a general lack of the big picture. Certain code portions were dealt with
+by a specific member and it became really hard for others to chime in later because they had to understand
+the original author's intent first. 
+In the future, we will spend more time working as a group early on so that everyone starts off on the same
+page and each member has a better understanding of the implementation as a whole. 
+
+
+4. Based on the defects you discovered during your programming phase, would you
+change anything about your own programming practices?
+
+- Yes. We will spend more effort early on in the specification review and design phases in order to
+come up with an implementation outline agreed upon by all team members. This will prevent problems 
+stemming from those two phases from propagating to the programming phase or worse. We will clarify 
+how each portion of code will function before we split the work, which will promote a unified 
+grand design as opposed to several individual ones that will eventually need to be mashed together.
+

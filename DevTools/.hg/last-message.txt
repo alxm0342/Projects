@@ -1,0 +1,1 @@
+Added Test Case for 3rd seeded defect: testCenterCastleJump(), seeded defect in BoardImpl.java

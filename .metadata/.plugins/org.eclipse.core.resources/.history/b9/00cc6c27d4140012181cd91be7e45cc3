@@ -1,0 +1,58 @@
+// Alexis Mendez
+// CS311, Section 01
+// Project 1: An implementation of universal finite state automata
+// 10/12/12
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
+
+public class UniversalFSA {
+	//---------------------------------------------------------------------------------
+	//interpret the FSA machine parameters from the input file
+	public static void readInput(String filePath) {
+		int numStates;
+		int finalNum;
+		String inputLine = "";
+		Boolean FINAL[];
+		StringTokenizer inTokens;
+		
+		//open and read input file
+		try {
+			FileReader filereader = new FileReader(filePath);
+			BufferedReader bufferedreader = new BufferedReader(filereader);
+			
+			//read first line, number of states
+			try{inputLine = bufferedreader.readLine();}
+         catch (IOException e){}
+			inTokens = new StringTokenizer(inputLine);
+			numStates = Integer.parseInt(inTokens.nextToken());
+			
+			//initialize all states to non-final
+			FINAL = new Boolean[numStates];
+			for (int i=0; i<numStates; i++) {
+				FINAL[i] = false;
+			}
+			
+			//read second line, set of final states
+			try{inputLine = bufferedreader.readLine();}
+         catch (IOException e){}
+			inTokens = new StringTokenizer(inputLine);
+			while (inTokens.hasMoreTokens()) {
+				finalNum = Integer.parseInt(inTokens.nextToken());
+				//ensure final state in the set of all states
+				if (finalNum < numStates && finalNum >=0) {
+					FINAL[finalNum] = true;
+				}
+			}
+			System.out.println(numStates);
+		}
+		catch(IOException e){}
+	}
+	//---------------------------------------------------------------------------------
+	public static void main(String[] args) {
+		readInput("input.txt");
+	}
+	//---------------------------------------------------------------------------------
+}

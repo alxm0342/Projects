@@ -1,0 +1,3 @@
+Fixed bug in makeMove() in RulesFactory.java, was allowing point arguments x=0 and y=0
+
+Changed to check arguments < 1 to satisfy pre-conditions of method.

@@ -1,0 +1,16 @@
+void ten(int x) {
+	// recursive factorial function
+	if (x>1) {
+		print_line(x = 10);
+	}
+	else return 1;
+}
+
+/*string literal*/
+void main(int s, int t, int u) {
+	int y=s + t + v;
+	y ++;
+	y--; //random comment
+	y*2;
+	ten(y);
+}

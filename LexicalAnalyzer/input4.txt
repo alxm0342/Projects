@@ -1,0 +1,19 @@
+void ten(int x) {
+	// recursive factorial function
+	if (x>1) {
+		print_line(x = 10);
+	}
+	else return 1;
+}
+
+string NAME(void) {
+	print_ln("my name is alex");
+}
+
+/*random comment*/
+void main(int s, int t, int u) {
+	if(23 < 24) {
+		NAME();
+	}
+/*commentcommentcommentcomment*/
+}

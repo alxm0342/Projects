@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+public class nQueens {
+	static int n; //the number of queens, corresponds to an (n*n) board
+	
+	//returns true if a queen can be placed in the k-th row and x[k]-th column
+	boolean place (int k, int x[]) {
+			for (int i=1; i<=(k-1); i++) {
+				//same diagonal or column
+		    	if ((x[i]==x[k]) || (Math.abs(x[i]-x[k])==Math.abs(i-k)))
+		        return false;
+			}
+		    return true;
+	}
+	
+	void rNqueens(int k, int x[]) {
+		for (int i=k; i <= n; i ++) {
+			if (place(i,x)) {
+				if (i==n) System.out.println("solution vector x");
+		        else rNquees(k+1, x[]);
+			}
+		}
+	}
+	
+	public static void main(String args[]) {
+		Scanner keyboard = new Scanner (System.in);
+		System.out.println("what is n?");
+		n = keyboard.nextInt();
+	}
+	
+}

@@ -1,0 +1,36 @@
+// Alexis Mendez
+// CS311, Section 01
+// Project 1: An implementation of universal finite state automata
+// 10/12/12
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
+
+public class UniversalFSA {
+	//---------------------------------------------------------------------------------
+	//interpret the FSA machine parameters from the input file
+	public static void readInput(String filePath) {
+		int numStates;
+		String inputLine = "";
+		
+		//open and read input file
+		try {
+			FileReader filereader = new FileReader(filePath);
+			BufferedReader bufferedreader = new BufferedReader(filereader);
+			
+			//read number of states
+			try{inputLine = bufferedreader.readLine();}
+         catch (IOException e){}
+			numStates = Integer.parseInt(inputLine);
+			System.out.println(numStates);
+		}
+		catch(IOException e){}
+	}
+	//---------------------------------------------------------------------------------
+	public static void main(String[] args) {
+		readInput("input.txt");
+	}
+	//---------------------------------------------------------------------------------
+}

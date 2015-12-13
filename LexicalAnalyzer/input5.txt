@@ -1,0 +1,23 @@
+void func(int x) {
+	while (x>1, x!=3) {
+		int c = 5
+	}
+	print_ln("c");
+}
+
+
+/*random comment*/
+void main(int s, int t, int u) {
+	if(23 < 24) {
+		NAME();
+	}
+	else if(24>23 {
+		//donothing
+	}
+/*commentcommentcommentcomment*/
+//comment
+//comment
+}
+void main2(void) {
+	String thisisafunction = "";
+}

@@ -1,0 +1,14 @@
+// Alexis Mendez
+// CS311, Section 01
+// Project 1: An implementation of universal finite state automata
+// 10/12/12
+
+import java.util.*;
+
+public class UniversalFSA {
+	//---------------------------------------------------------------------------------
+	public static void main(String[] args) {
+		readInput("input.txt");
+	}
+	//---------------------------------------------------------------------------------
+}

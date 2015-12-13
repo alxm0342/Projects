@@ -1,0 +1,54 @@
+package edu.csupomona.cs480.hnefatafl.tests;
+
+import static org.junit.Assert.assertTrue;
+
+import java.awt.Point;
+import java.util.List;
+
+import org.junit.Test;
+
+import edu.csupomona.cs480.hnefatafl.interfaces.Color;
+import edu.csupomona.cs480.hnefatafl.interfaces.Move;
+import edu.csupomona.cs480.hnefatafl.interfaces.Board;
+import edu.csupomona.cs480.hnefatafl.rules.RulesFactory;
+import edu.csupomona.cs480.hnefatafl.interfaces.Piece;
+
+/** TODO: implement one test case for each seeded defect in this class.
+ * The 5 test cases here should succeed on your main implementation but
+ * all 5 should fail on your implementation with the seeded defects.
+ * 
+ * Note that none of the test cases in SmokeTest.java should fail for
+ * either the main or the seeded implementation.
+ * 
+ * If you haven't written a JUnit test before, see SmokeTest.java.  In
+ * Eclipse you can run JUnit tests by right-clicking on the package and
+ * selecting Run As..., then choosing JUnit Test.
+ * 
+ * @author 480 Students
+ *
+ */
+//BUGGY TESTS
+public class TestsForSeededDefects 
+	{
+	/** Mess up the logic of capturing the king at his castle */
+	@Test
+	public void testCastle() {
+		Board initialPosition = RulesFactory.getDefault().makePosition();
+		initialPosition.addPieceAt(Piece.BlackWarrior,new Point(5,7));
+		initialPosition.addPieceAt(Piece.WhiteKing,new Point(6,7));
+		initialPosition.addPieceAt(Piece.BlackWarrior,new Point(7,7));
+		initialPosition.addPieceAt(Piece.BlackWarrior,new Point(6,8));
+
+		assertTrue(initialPosition.checkForVictory() == Color.Black);
+	}
+	
+	/*** Check to see if white will win if only 2 black warrior left*/
+    @Test public void testWinCondition() 
+    {
+        Board initialPosition = RulesFactory.getDefault().makePosition();
+        initialPosition.addPieceAt(Piece.WhiteKing, new Point(6,8));
+        initialPosition.addPieceAt(Piece.BlackWarrior,new Point(2,1));
+        initialPosition.addPieceAt(Piece.BlackWarrior,new Point(2,2));
+        assertTrue(initialPosition.checkForVictory() == Color.White);
+    }
+}
