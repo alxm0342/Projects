@@ -1,0 +1,36 @@
+/*
+ * Alexis Mendez
+ * Learning project implementing an algorithm for displaying all possible substrings of a given string
+ * 1/13/2015
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Substrings {
+	
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		String entry = keyboard.nextLine();
+		int entryLength = entry.length();
+		ArrayList<String> substrings = new ArrayList<String>();
+		
+		System.out.println("Input string: " + entry);
+		
+		//substring of consecutive lengths less than entry
+		for (int subLength = 1; subLength <= entryLength; subLength++) {			
+			System.out.printf("Length = %d: ", subLength);			
+			//start at each character until length limit is reached
+			for (int startIndex = 0; startIndex <= entryLength; startIndex++) {
+				if ((startIndex + subLength) <= entryLength) {
+					String subString = entry.substring(startIndex, startIndex + subLength);
+					System.out.printf("| %s ", subString);
+					substrings.add(substring);
+				}
+				System.out.print("|\n");
+			}
+		}
+		
+		System.out.println(x);
+	}
+}

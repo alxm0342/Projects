@@ -1,0 +1,14 @@
+/*
+ * Alexis Mendez
+ * Learning project implementing an algorithm for displaying all possible substrings of a given string
+ * 1/13/2015
+ */
+
+import java.util.Scanner;
+
+public class Substrings {
+	
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+	}
+}
