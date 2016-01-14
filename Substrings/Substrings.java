@@ -7,8 +7,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Substrings {
-	
+public class Substrings {	
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
 		ArrayList<String> substrings = new ArrayList<String>();
@@ -25,7 +24,7 @@ public class Substrings {
 		for (int subLength = 1; subLength <= entryLength; subLength++) {
 			int subLengthCount = 0;
 			System.out.printf("Length = %d: ", subLength);			
-			//start at each character until sunstring length limit is reached (do not exceed original string length)
+			//start at each character until substring length limit is reached (do not exceed original string length)
 			for (int startIndex = 0; startIndex <= entryLength; startIndex++) {
 				if ((startIndex + subLength) <= entryLength) {
 					String substring = entry.substring(startIndex, startIndex + subLength);
