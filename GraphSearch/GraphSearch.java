@@ -8,21 +8,21 @@ public class GraphSearch {
 		//interfact searcher, concrete types can be SearchStack or SearchQueue
 		Searcher<Integer> s;
 		
-		//========================================================
-		//---------------------	0  1  2  3  4  5  6  7  8 --------
-		//========================================================
-		int[][] adjacency = {{	0, 1, 0, 1, 0, 0, 0, 0, 1 },  // 0
-									{ 	1, 0, 0, 0, 0, 0, 0, 1, 0 },  // 1
-									{ 	0, 0, 0, 1, 0, 1, 0, 1, 0 },  // 2
-									{ 	1, 0, 1, 0, 1, 0, 0, 0, 0 },  // 3
-									{ 	0, 0, 0, 1, 0, 0, 0, 0, 1 },  // 4
-									{ 	0, 0, 1, 0, 0, 0, 1, 0, 0 },  // 5
-									{ 	0, 0, 0, 0, 0, 1, 0, 0, 0 },  // 6
-									{ 	0, 1, 1, 0, 0, 0, 0, 0, 0 },  // 7
-									{ 	1, 0, 0, 0, 1, 0, 0, 0, 0 }};	// 8
-		
-		
-		Graph g = new Graph(adjacency);
+		//initialize the graph
+		Graph<String> g = new Graph<String>();
+		g.addVertex("0");
+		g.addVertex("1");
+		g.addVertex("2");
+		g.addVertex("3");
+		g.addVertex("4");
+		g.addVertex("5");
+		g.addVertex("6");
+		g.addEdge("0", "1");
+		g.addEdge("0", "2");
+		g.addEdge("0", "3");
+		g.addEdge("1", "4");
+		g.addEdge("2", "5");
+		g.addEdge("3", "6");
 		
 		//breadth-first search
 		s = new SearchQueue<Integer>();

@@ -1,4 +1,5 @@
 /*
+ * Alexis Mendez
  * Interface for the three simple functions needed to traverse
  * (1) peek()
  * (2) add()

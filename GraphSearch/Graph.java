@@ -1,35 +1,86 @@
 /*
- * Source: http://www.mathcs.emory.edu/~cheung/Courses/323/Syllabus/Graph/Progs/bfs/Graph1.java
+ * Alexis Mendez
+ * Simple, undirected graph class for traversal exercises implemented with HashMaps
+ * Parallel edges and duplicate vertices are not allow (will overwrite previous entry)
+ * Hanging edges are allowed (currently; auto-removal is planned)
  */
 
-public class Graph {
-	//member attributes
-	int[][]  adjMatrix;
-   int      rootNode = 0;
-   int      NNodes;
-   boolean[] visited; 
+import java.util.HashMap;
+
+//Simple graph G = {V,E}
+public class Graph<T> {
+	private HashMap<T, Object> vertices;
+	private HashMap<String, Object> edges;
 	
-   //empty graph constructor
-	public Graph(int N)
-   {
-      NNodes = N;
-      adjMatrix = new int[N][N];
-      visited = new boolean[N];
-   }
+	//Graph constructor
+	public Graph() {
+		vertices = new HashMap<T, Object>();
+		edges = new HashMap<String, Object>();
+	}
 	
-	//adjacency matrix constructor
-   public Graph(int[][] mat)
-   {
-      int i, j;
+	//getters/setters
+	public HashMap<T, Object> getVertices() {
+		return vertices;
+	}
+	
+	public HashMap<String, Object> getEdges() {
+		return edges;
+	}
+	
+	//member functions
+	public boolean addVertex(T value) {
+		vertices.put(value, null);
+		return true;
+	}
+	
+	
+	//TODO (improvement): auto-eliminate hanging edges containing this vertex
+	public boolean removeVertex(T vertex) {
+		if (vertices.containsKey(vertex)) {
+			vertices.remove(vertex);			
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public boolean addEdge(T start, T end) {
+		if (vertices.containsKey(start) && vertices.containsKey(end)) {
+			Edge<T> e = new Edge<T>(start, end);
+			edges.put(e.getKey(), null);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public boolean removeEdge(T start, T end) {
+		Edge<T> e = new Edge<T>(start, end);
+		
+		if (edges.containsKey(e.getKey())) {
+			edges.remove(e.getKey());
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	//Edge class
+	private class Edge<T> {
+		private T start;
+		private T end;
+		
+		//Node constructor
+		public Edge (T one, T two) {
+			start = one;
+			end = two;
+		}
 
-      NNodes = mat.length;
-
-      adjMatrix = new int[NNodes][NNodes];
-      visited = new boolean[NNodes];
-
-
-      for ( i=0; i < NNodes; i++)
-         for ( j=0; j < NNodes; j++)
-            adjMatrix[i][j] = mat[i][j];
-   }
+		public String getKey() {
+			return "(" + start.toString() + ", " +  end.toString() + ")";
+		}
+	}
 }

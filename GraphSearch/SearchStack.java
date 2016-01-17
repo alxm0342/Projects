@@ -1,4 +1,5 @@
 /*
+ * Alexis Mendez
  * Searcher Class leveraging a stack (should result in depth-first search
  */
 
@@ -6,7 +7,11 @@ import java.util.Stack;
 
 public class SearchStack<T> implements Searcher<T> {
 	//implemented with a stack
-	private Stack<T> wrappedStack = new Stack<T>();
+	private Stack<T> wrappedStack;
+	
+	SearchStack() {
+		wrappedStack = new Stack<T>();
+	}
 	
 	//methods
 	public T peek() {

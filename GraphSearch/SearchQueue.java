@@ -1,4 +1,5 @@
 /*
+ * Alexis Mendez
  * Searcher Class leveraging a queue (should result in breadth-first search
  */
 
@@ -14,7 +15,6 @@ public class SearchQueue<T> implements Searcher<T> {
 		return wrappedQueue.peek();
 	}
 	
-	@Override
 	public void add(T node) {
 		wrappedQueue.add(node);
 	}
